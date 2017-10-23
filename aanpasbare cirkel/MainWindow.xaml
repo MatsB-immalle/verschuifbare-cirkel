@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:aanpasbare_cirkel"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <Canvas>
+        <Slider x:Name="HorizentalSlider" RenderTransformOrigin="0.36,0.397" Canvas.Left="111" Canvas.Top="275" Height="24" Width="373" ValueChanged="Slider_ValueChanged"/>
+        <Slider x:Name="VerticalSlider" RenderTransformOrigin="0.61,0.444" Canvas.Left="-51" Canvas.Top="175" Width="244" ValueChanged="VerticalSlider_ValueChanged">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.66"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Ellipse x:Name="cirkel" Fill="#FFF4F4F5" Height="100" Canvas.Left="131" Stroke="Black" Canvas.Top="39" Width="100"/>
+
+    </Canvas>
 </Window>

@@ -24,5 +24,27 @@ namespace aanpasbare_cirkel
         {
             InitializeComponent();
         }
+
+        private void ellipse()
+        {
+            
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            cirkel.Width = HorizentalSlider.Value;
+            HorizentalSlider.Maximum = 350;
+                
+
+        }
+
+        private void VerticalSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+            cirkel.Height = VerticalSlider.Value;
+            VerticalSlider.Maximum = 240;
+
+        }
     }
+
 }
