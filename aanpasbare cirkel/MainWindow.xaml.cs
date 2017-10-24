@@ -23,12 +23,10 @@ namespace aanpasbare_cirkel
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void ellipse()
-        {
             
         }
+
+       
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -44,6 +42,18 @@ namespace aanpasbare_cirkel
             cirkel.Height = VerticalSlider.Value;
             VerticalSlider.Maximum = 240;
 
+        }
+
+        private void SliderX_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            cirkel.Margin = new Thickness(SliderX.Value, SliderY.Value, 0, 0);
+            SliderX.Maximum = 250;
+        }
+
+        private void SliderY_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            cirkel.Margin = new Thickness(SliderX.Value, SliderY.Value, 0, 0);
+            SliderY.Maximum = 130;
         }
     }
 
